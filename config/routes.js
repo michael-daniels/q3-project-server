@@ -8,7 +8,7 @@ module.exports = function(app){
   app.get('/', index.index);
   app.post('/register', register.register);
   app.post('/login', login.login);
-  app.get('/dashboard', dashboard.dashboard);
+  app.get('/user/:username', dashboard.user);
 
 
   //app.post('/', template.index)
