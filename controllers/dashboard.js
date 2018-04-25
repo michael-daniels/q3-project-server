@@ -12,7 +12,7 @@ module.exports = {
         res.json(results[0])
       })
   },
-  comments: function(req, res) {
+  commentsget: function(req, res) {
     knex('comments')
       .where({
         user_id:req.params.user_id
@@ -20,6 +20,17 @@ module.exports = {
       .then((results) => {
         console.log("DATABASE", results)
         res.json(results)
+      })
+  },
+  commentspost: function(req, res) {
+    knex('comments')
+      .insert({
+        user_id: req.params.user_id,
+        username: req.body.username,
+        content: req.body.content,
+      })
+      .then(() => {
+        res.sendStatus('200')
       })
   },
 

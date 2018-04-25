@@ -9,7 +9,8 @@ module.exports = function(app){
   app.post('/register', register.register);
   app.post('/login', login.login);
   app.get('/user/:username', dashboard.user);
-  app.get('/comments/:user_id', dashboard.comments);
+  app.get('/comments/:user_id', dashboard.commentsget);
+  app.post('/comments/:user_id', dashboard.commentspost);
 
 
   //app.post('/', template.index)
