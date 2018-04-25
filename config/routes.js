@@ -13,5 +13,6 @@ module.exports = function(app){
   app.post('/comments/:user_id', dashboard.commentspost);
   app.post('/comment/delete/:id', dashboard.commentdelete)
   app.get('/permissions/:currentUser', dashboard.permissions);
+  app.get('/lob', index.lob);
 
 }
