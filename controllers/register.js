@@ -20,6 +20,7 @@ module.exports = {
             .insert({
               username:req.body.username,
               petname: req.body.petname,
+              avatarurl: req.body.avatarurl,
               petbreed: req.body.petbreed,
               petgender: req.body.petgender,
               datelost: req.body.datelost,
