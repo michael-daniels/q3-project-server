@@ -12,10 +12,10 @@ module.exports = {
         console.log("USER DATA", user[0])
         if (user[0].username === req.body.username && user[0].password === req.body.password) {
           req.session.current_user = [{username:req.body.username}];
-          res.redirect(`http://localhost:3000/profile/${req.body.username}?${randomKey}`)
+          res.redirect(`https://straybase.herokuapp.com/profile/${req.body.username}?${randomKey}`)
         }
         else {
-          res.redirect(`http://localhost:3000/login`)
+          res.redirect(`https://straybase.herokuapp.com/login`)
         }
 
       })
