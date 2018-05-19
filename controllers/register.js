@@ -13,7 +13,7 @@ module.exports = {
           }
         }
         if (usernameTaken === true) {
-          res.redirect('http://localhost:3000/register?usernametaken=true')
+          res.redirect('https://straybase.herokuapp.com/register?usernametaken=true')
         }
         else {
 
@@ -23,7 +23,7 @@ module.exports = {
           // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
           let sampleFile = req.files.sampleFile;
           let imgRoute = `./public/images/${Date.now() + '-' + sampleFile.name}`
-          let imgLink = imgRoute.replace('./public', 'http://localhost:8000')
+          let imgLink = imgRoute.replace('./public', 'https://straybase-server.herokuapp.com')
           // Use the mv() method to place the file somewhere on your server
           sampleFile.mv(imgRoute, function(err) {
             if (err) {
@@ -48,7 +48,7 @@ module.exports = {
               password: req.body.password,
             })
             .then(() => {
-              res.redirect('http://localhost:3000/login')
+              res.redirect('https://straybase.herokuapp.com/login')
             })
         }
       })
