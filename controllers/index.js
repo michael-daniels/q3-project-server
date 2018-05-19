@@ -3,6 +3,6 @@ const fetch = require('node-fetch');
 
 module.exports = {
   index: function(req, res) {
-    res.send('Home')
+    res.send('Welcome to the StrayBase API')
   },
 }
