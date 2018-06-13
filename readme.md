@@ -1,3 +1,3 @@
-## Hearthstone Card Picker
+## StrayBase
 
-Create a simple app that allows users to create cards and add them to their deck (stored in session). They should also be able to remove cards from their deck.
+A lost and found pet database that helps connect lost pets to their owners. Application still under development with plans for commercial deployment. A full stack application built with React, Redux, Node.js, Express, Knex, and PostgreSQL.
